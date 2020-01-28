@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="static/style.css" type="text/css">
+<head>
+    <meta charset="UTF-8">
+    <style>
+	body {
+	  background-color:#F08080;
+	}
+        table{
+                     background-color:#FFC0CB;
+                     border-style: outset;
+                     height:50px;
+                     font-size:20px;
+                     color: red;
+                     border-color:#8B008B;
+        };
+    </style>
+</head>
+<body >
+<h1 style="color:#8B0000;" align="center">Breast Cancer Detection Web App</h1>
+<form method=post>
+    <table align="center" class="table1">
+    {% for field in form %}
+        <tr>
+        <td>{{ field.label }}</td><td>{{ field }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    <p align="center"><input type=submit style="background-color: #f44336;"></form></p>
+
+<p>
+{% if result != None %}
+<h2 style="color:#FFFFFF;" align="center">{{ result }}</h2>
+{% endif %}
+
+<h5 align="center">*This web app is only for educational purpose*</h5>
+
+</body>
+</html>
